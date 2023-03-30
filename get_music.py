@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests
 import re
-import pytube
 import youtube_dl
 import os
 
