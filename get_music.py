@@ -3,6 +3,7 @@ import requests
 import re
 import pytube
 import youtube_dl
+import os
 
 requests.packages.urllib3.disable_warnings()
 
@@ -10,12 +11,9 @@ requests.packages.urllib3.disable_warnings()
 # https://www.youtube.com/watch?v=uHeQBDQlPD8&list=<get_playlist_id_here> (Last string after list=)
 # https://www.youtube.com/watch?v=i3avL_uAvLg&list=PLZ0LWy2i9_iPRk2UgeceeB8eZ3g_yucaE
 
-#Path to download to
-folder_path = "~/"
+folder_path = "~/youtube_music_downloads"
+
 playlist_id = 'PLZ0LWy2i9_iPRk2UgeceeB8eZ3g_yucaE'
-
-
-
 r = requests.get(f'https://www.youtube.com/watch?v=uHeQBDQlPD8&list={playlist_id}')
 page = r.text
 soup=bs(page,'html.parser')
@@ -24,6 +22,10 @@ pattern = r"/watch\?[\w=&%]+"
 matches = re.findall(pattern, page)
 og_array = []
 song_count = 0
+
+# Create the music directory if it doesn't exist
+if not os.path.exists(folder_path):
+    os.makedirs(folder_path)
 
 for match in matches:
     og_music = f"https://youtube.com{match}"
@@ -44,7 +46,7 @@ for match in matches:
                     'preferredcodec': 'mp3',
                     'preferredquality': '192',
                 }],
-                'outtmpl': f"{folder_path}/%(title)s.%(ext)s"
+                'outtmpl': f"{folder_path}/%(title)s.%(ext)s",
             }
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([og_music])
