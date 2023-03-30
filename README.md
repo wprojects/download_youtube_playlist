@@ -1,4 +1,4 @@
-# Get all songs from youtube playlist
+# Get all songs from a youtube playlist
 
 Install libraries:
 Go to terminal and enter this in the folder the file is in:
