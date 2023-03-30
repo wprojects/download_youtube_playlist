@@ -6,7 +6,7 @@ pip3 install -r requirements.txt
 
 Set what folder you want the files to download to by setting your path inside the script example: folder_path = "~/Songs"
 
-Grab the paylist id and put it in the "playlist_id" variable inside the script
+Grab the paylist id and put it in the "playlist_id" variable inside the script to tell the script which playlist to download!
 ![alt text](https://cdn.glitch.global/bca40693-5798-4926-a7e7-2e6d3b03cb67/get_playlist_id?v=1680177480879)
 
 
