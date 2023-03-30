@@ -11,6 +11,10 @@ requests.packages.urllib3.disable_warnings()
 # https://www.youtube.com/watch?v=uHeQBDQlPD8&list=<get_playlist_id_here> (Last string after list=)
 # https://www.youtube.com/watch?v=i3avL_uAvLg&list=PLZ0LWy2i9_iPRk2UgeceeB8eZ3g_yucaE
 
+#Change it to your download folder example:
+# folder_path = "~/Downloads/youtube_music_downloads"
+
+#Where the music downloads to
 folder_path = "~/youtube_music_downloads"
 
 playlist_id = 'PLZ0LWy2i9_iPRk2UgeceeB8eZ3g_yucaE'
