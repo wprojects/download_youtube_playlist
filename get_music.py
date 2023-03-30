@@ -11,7 +11,7 @@ requests.packages.urllib3.disable_warnings()
 # https://www.youtube.com/watch?v=i3avL_uAvLg&list=PLZ0LWy2i9_iPRk2UgeceeB8eZ3g_yucaE
 
 #Path to download to
-folder_path = "/"
+folder_path = "~/"
 playlist_id = 'PLZ0LWy2i9_iPRk2UgeceeB8eZ3g_yucaE'
 
 
